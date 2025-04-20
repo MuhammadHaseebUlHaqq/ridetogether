@@ -1,0 +1,252 @@
+/* Global Styles */
+:root {
+  --primary-color: #4CAF50;
+  --secondary-color: #2196F3;
+  --text-color: #333;
+  --bg-color: #fff;
+  --nav-bg: #fff;
+  --card-bg: #fff;
+}
+
+/* Dark Mode Colors */
+[data-theme="dark"] {
+  --text-color: #fff;
+  --bg-color: #1a1a1a;
+  --nav-bg: #2d2d2d;
+  --card-bg: #2d2d2d;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  transition: background-color 0.3s ease;
+}
+
+/* Navigation Styles */
+.navbar {
+  background-color: var(--nav-bg) !important;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  color: var(--primary-color) !important;
+}
+
+.nav-link {
+  color: var(--text-color) !important;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--primary-color) !important;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url('hero-bg.jpg') center/cover;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+/* Features Section */
+.feature-card {
+  background-color: var(--card-bg);
+  border-radius: 10px;
+  padding: 2rem;
+  margin: 1rem 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+  background-color: #388E3C;
+  border-color: #388E3C;
+}
+
+.btn-secondary {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+}
+
+/* Dark Mode Toggle */
+#darkModeToggle {
+  background: none;
+  border: none;
+  color: var(--text-color);
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.toggle-icons {
+  position: relative;
+  width: 24px;
+  height: 24px;
+}
+
+.toggle-icons i {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.3s ease;
+}
+
+[data-theme="dark"] .fa-sun {
+  opacity: 1;
+}
+
+[data-theme="dark"] .fa-moon {
+  opacity: 0;
+}
+
+[data-theme="light"] .fa-sun {
+  opacity: 0;
+}
+
+[data-theme="light"] .fa-moon {
+  opacity: 1;
+}
+
+/* Animations */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 60vh;
+  }
+  
+  .feature-card {
+    margin: 0.5rem 0;
+  }
+}
+
+/* Form Styles */
+.form-control {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  border: 1px solid #ddd;
+}
+
+.form-control:focus {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* Card Styles */
+.card {
+  background-color: var(--card-bg);
+  transition: background-color 0.3s ease;
+}
+
+/* Footer Styles */
+footer {
+  background-color: var(--nav-bg);
+  color: var(--text-color);
+  padding: 2rem 0;
+  margin-top: 3rem;
+}
+
+/* Scroll to Top Button */
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--primary-color);
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+}
+
+.scroll-to-top.visible {
+  opacity: 1;
+}
+
+/* Custom Animations */
+.bounce-in {
+  animation: bounceIn 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.1);
+  }
+  80% {
+    opacity: 1;
+    transform: scale(0.89);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Additional Utility Classes */
+.shadow-hover:hover {
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.text-gradient {
+  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Image Styles */
+.campus-image {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin: 2rem 0;
+}
+
+.driver-illustration {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+} 

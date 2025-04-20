@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RideTogether - NUST Carpooling Platform</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Add AOS library and GSAP for advanced animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top fade-in"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="/">
+          <i class="fas fa-car-side text-primary me-2"></i>
+          <strong>RideTogether</strong>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto align-items-center">
+            <li class="nav-item">
+              <a class="nav-link" href="RideSearch.html"
+                ><i class="fas fa-search me-1"></i> Search Rides</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="RidePosting.html"
+                ><i class="fas fa-plus-circle me-1"></i> Offer a Ride</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="help_center.html"
+                ><i class="fas fa-question-circle me-1"></i> Help Center</a
+              >
+            </li>
+            <li class="nav-item">
+              <button id="darkModeToggle" class="btn">
+                <div class="toggle-icons">
+                  <i class="fas fa-sun"></i>
+                  <i class="fas fa-moon"></i>
+                </div>
+              </button>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link btn btn-primary text-white px-3"
+                href="login.html"
+                ><i class="fas fa-user me-1"></i> Login/Register</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Rest of the content remains the same, just update image paths -->
+    <img
+      src="picture1.png"
+      alt="NUST Campus"
+      class="campus-image"
+    />
+    <!-- ... -->
+    <img
+      src="picture2.jpg"
+      alt="People carpooling"
+      class="img-fluid driver-illustration"
+    />
+    <!-- ... rest of the content ... -->
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+    <!-- Scroll to Top Component -->
+    <script src="scrollToTop.js"></script>
+  </body>
+</html> 

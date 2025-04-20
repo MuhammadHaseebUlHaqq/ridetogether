@@ -1,0 +1,434 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+:root {
+    --primary: #0066CC;
+    --primary-dark: #004C99;
+    --primary-light: #4d84ff;
+    --secondary: #6c757d;
+    --light: #f8f9fa;
+    --dark: #212529;
+    --text-primary: #333333;
+    --text-secondary: #666666;
+    --text-muted: #888888;
+    --border-color: #e0e0e0;
+    --background-main: #ffffff;
+    --background-secondary: #f8f9fa;
+    --card-bg: #ffffff;
+    --input-bg: #ffffff;
+    --input-border: #e0e0e0;
+    --input-color: #333333;
+}
+
+.mode-toggle-btn {
+    background-color: var(--secondary);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 15px;
+    margin-left: 10px;
+    width: auto;
+}
+
+.mode-toggle-btn:hover {
+    background-color: #5a6268;
+}
+
+
+body {
+    background: url('stylishback.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: var(--text-primary);
+}
+
+body.dark-mode {
+    background: var(--background-main);
+    color: var(--text-primary);
+}
+
+.dark-mode {
+    --primary: #4d84ff;
+    --primary-dark: #3366cc;
+    --primary-light: #66a3ff;
+    --secondary: #6c757d;
+    --light: #1a1a1a;
+    --dark: #ffffff;
+    --text-primary: #ffffff;
+    --text-secondary: #cccccc;
+    --text-muted: #888888;
+    --border-color: #2d2d2d;
+    --background-main: #000000;
+    --background-secondary: #1a1a1a;
+    --card-bg: #1a1a1a;
+    --input-bg: #1a1a1a;
+    --input-border: #2d2d2d;
+    --input-color: #ffffff;
+}
+
+.dark-mode .login-container,
+.dark-mode .signup-container {
+    background-color: var(--card-bg);
+    color: var(--text-primary);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.05);
+}
+
+.dark-mode input {
+    background-color: var(--input-bg);
+    border-color: var(--input-border);
+    color: var(--input-color);
+}
+
+.dark-mode input:focus {
+    border-color: var(--primary);
+    background-color: var(--input-bg);
+    box-shadow: 0 0 0 3px rgba(77, 132, 255, 0.3);
+}
+
+.dark-mode label {
+    color: var(--text-primary);
+}
+
+.dark-mode .login-btn,
+.dark-mode .signup-btn {
+    background-color: var(--primary);
+}
+
+.dark-mode .login-btn:hover,
+.dark-mode .signup-btn:hover {
+    background-color: var(--primary-dark);
+}
+
+.dark-mode .forgot-password,
+.dark-mode .create-account {
+    color: var(--primary-light);
+}
+
+.dark-mode .forgot-password:hover,
+.dark-mode .create-account:hover {
+    color: var(--primary);
+}
+
+.dark-mode .error-message {
+    color: #ff6b6b;
+}
+
+.login-container, .signup-container {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 400px;
+    text-align: center;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.login-container:hover, .signup-container:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+.logo {
+    margin-bottom: 30px;
+}
+
+.logo img {
+    max-width: 300px;
+    height: auto;
+    filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.1));
+}
+
+.name-fields {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.half-width {
+    flex: 1;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+    position: relative;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 15px;
+    background-color: var(--light);
+    transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+    border-color: var(--primary);
+    background-color: #fff;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
+}
+
+.error-message {
+    color: #e74c3c;
+    font-size: 13px;
+    margin-top: 5px;
+    display: none;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.login-btn, .signup-btn {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    width: 70%;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.login-btn:hover, .signup-btn:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 102, 204, 0.2);
+}
+
+.forgot-password {
+    display: block;
+    margin-top: 18px;
+    color: var(--primary);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.forgot-password:hover {
+    color: var(--primary-dark);
+    text-decoration: underline;
+}
+
+.create-account {
+    display: block;
+    margin-top: 20px;
+    color: var(--primary);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.create-account:hover {
+    color: var(--primary-dark);
+    text-decoration: underline;
+}
+
+.forgot-password-container {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 400px;
+    text-align: center;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+.forgot-password-container:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+.reset-btn {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    width: 70%;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.reset-btn:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 102, 204, 0.2);
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.back-to-login {
+    color: var(--primary);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.back-to-login:hover {
+    color: var(--primary-dark);
+    text-decoration: underline;
+}
+
+.dark-mode .forgot-password-container {
+    background-color: #1e1e1e;
+    color: #f1f1f1;
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.05);
+}
+
+.dark-mode .reset-btn {
+    background-color: #444;
+}
+
+.dark-mode .reset-btn:hover {
+    background-color: #666;
+}
+
+.dark-mode .back-to-login {
+    color: #a3c9ff;
+}
+
+.dark-mode .back-to-login:hover {
+    color: #72a4f2;
+}
+
+/* Add styles for the navbar-brand class that's used for the logo */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  font-size: 1.75rem;
+  text-decoration: none;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.navbar-brand .fa-car-side {
+  margin-right: 0.5rem;
+}
+
+.navbar-brand strong {
+  font-weight: 700;
+}
+
+.text-primary {
+  color: #007bff !important;
+}
+
+.me-2 {
+  margin-right: 0.5rem !important;
+}
+
+/* Dark mode support for the logo */
+.dark-mode .navbar-brand {
+  color: #fff;
+}
+
+/* Add styles for the login/signup body layout with navbar and footer */
+.login-signup-body {
+  display: block;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('stylishback.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Fix navbar height to be consistent with other pages */
+.login-signup-body .navbar {
+  padding: 0.5rem 1rem;
+  height: auto;
+}
+
+.login-signup-body .navbar-brand {
+  font-size: 1.25rem;
+  margin-bottom: 0;
+}
+
+.auth-content-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 350px); /* Adjust to account for navbar and footer */
+  padding: 2rem 0;
+}
+
+/* Center the logo */
+.logo .navbar-brand {
+  justify-content: center;
+  margin: 0 auto;
+}
+
+/* Make containers narrower for the centered layout */
+.login-container, .signup-container, .forgot-password-container {
+  max-width: 450px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* Dark mode support for the navbar */
+.dark-mode.login-signup-body .navbar {
+  background-color: #1e1e1e !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2) !important;
+}
+
+.dark-mode.login-signup-body .navbar-brand,
+.dark-mode.login-signup-body .nav-link:not(.btn) {
+  color: #f1f1f1 !important;
+}
+
+.dark-mode.login-signup-body .navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode.login-signup-body .navbar-toggler-icon {
+  filter: invert(1);
+}
+
+/* Dark mode updates for the new navbar and footer layout */
+.dark-mode.login-signup-body {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url('stylishback.jpg') no-repeat center center fixed;
+}
